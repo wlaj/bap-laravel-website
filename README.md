@@ -1,4 +1,6 @@
-# Laravel website voor BAP __ Momenteel bij P2.09A__
+# Laravel website voor BAP 
+
+__ Momenteel bij P2.09A__
 
 Welkom tot de github pagina voor mijn laravel website. 
 
