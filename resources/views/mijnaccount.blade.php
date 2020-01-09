@@ -8,11 +8,23 @@
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="/css/app.css">
 
 </head>
 
 <body>
-  <script src="js/scripts.js"></script>
+  <header>
+    <header>
+    HEADER
+    </header>
+    <nav>
+      NAVIGATION
+    </nav>
+    <main>
+      MAIN
+      </main>
+      <footer>
+        FOOTER
+      </footer>
 </body>
 </html>
