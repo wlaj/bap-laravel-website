@@ -1,37 +1,26 @@
+
 <!doctype html>
-
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-
-  <title>Laravel</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="/css/style.css">
-
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,400,500,600,700,800&display=swap" rel="stylesheet">
-
+    @include('partials.header')
 </head>
-
 <body>
-  <header>
-    <h2>
-    @section('header')
-    WEBSHOP
-    @show
-  </h2>
+<div class="container-large">
+
+    <header class="">
+        @include('partials.navbar')
     </header>
-    <nav>
-      NAVIGATION
-    </nav>
-    <section>
-      @yield('products')
-    </section>
-    <main>
-      @yield('content')
-      </main>
-      <footer>
-      </footer>
+
+    <div id="main" class="">
+            @include('partials.jumbo')
+                @yield('content')
+
+    </div>
+
+    <footer class="row">
+        @include('partials.footer')
+    </footer>
+
+</div>
 </body>
 </html>

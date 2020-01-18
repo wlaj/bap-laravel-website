@@ -11,23 +11,21 @@
 |
 */
 
-Route::get('/', 'HomeController@showHome');
+// hoofdpaginas
 
-Route::get('/about-us', 'HomeController@showAboutUs');
+Route::get('/', 'HomeController@showHome')->name('homepage');
 
-Route::get('/products', 'HomeController@showProducts');
+Route::get('/about-us', 'HomeController@showAboutUs')->name('about-us');
 
-Route::get('/hallo/{name}',' HomeController@showName');
+Route::get('/browsers', 'HomeController@showBrowsers')->name('browsers');
+
+Route::get('/contact', 'HomeController@showContact')->name('contact');
+
+Route::get('/browsers/{name}','HomeController@showName')->name('show-name');
 
 
 
 Route::get('/blog/artikel/{id}','BlogController@showArtikel');
-
-
-Route::get('/contact', function()
-{
-    return 'Contact!';
-});
 
 Route::get('/producten', function()
 {

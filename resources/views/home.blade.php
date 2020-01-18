@@ -1,23 +1,25 @@
 @extends('layouts.master')
 
-@section('header')
-Browser
-@endsection
+<head>
+     <link rel="stylesheet" href="/css/home.css">
+</head>
 
 @section('content')
-<h2>Browsers</h2>
-<p>
-Welkom tot {{ $Name }}. {{ $information }} We bestaan als sinds {{ $experience }} jaar.
-</p>
-<ol>
-@foreach ($producten as $product)
-<li>{{ $product }} </li>
+<div class="row">
 
-@endforeach
-</ol>
-
-@for($i=1;$i<=10;$i++){
-  {{ $i }}<br/>
-  @endfor
-
-@endsection
+<div class="col-lg-4 col-md-4 col-xs-4 thumb">
+    <a class="thumbnail" href="#">
+        <img class="img-responsive" src="{{ asset('/img/firefox.png') }}" alt="">
+    </a>
+</div>
+<div class="col-lg-4 col-md-4 col-xs-4 thumb">
+    <a class="thumbnail" href="#">
+        <img class="img-responsive" src="{{ asset('/img/firefox.png') }}" alt="">
+    </a>
+</div>
+<div class="col-lg-4 col-md-4 col-xs-4 thumb">
+    <a class="thumbnail" href="#">
+        <img class="img-responsive" src="{{ asset('/img/firefox.png') }}" alt="">
+    </a>
+</div>
+@stop

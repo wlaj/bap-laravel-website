@@ -1,4 +1,4 @@
 @extends('layouts.master')
 @section('content')
-    i am the about page
+    i am the contact page
 @stop

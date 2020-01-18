@@ -1,0 +1,19 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+a.nav-link {
+  font-size: 20px;
+}
+
+.jumbotron-fluid {
+  background-image: url("/img/background.jpg");
+  background-size: cover;
+    text-shadow: #444 0 1px 1px;
+    color: #FFF;
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+}

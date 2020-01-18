@@ -31,8 +31,13 @@ class HomeController extends Controller
       return view('showname', ['naam' => $name]);
     }
 
-    public function showProducts()
+    public function showBrowsers()
     {
-      return view('products');
+      return view('browsers');
+    }
+
+    public function showContact()
+    {
+      return view('contact');
     }
 }
