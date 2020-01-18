@@ -17,6 +17,8 @@ Route::get('/about-us', 'HomeController@showAboutUs');
 
 Route::get('/products', 'HomeController@showProducts');
 
+Route::get('/hallo/{name}',' HomeController@showName');
+
 
 
 Route::get('/blog/artikel/{id}','BlogController@showArtikel');

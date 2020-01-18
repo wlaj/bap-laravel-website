@@ -1,13 +1,23 @@
 @extends('layouts.master')
 
 @section('header')
-Homepage
+Browser
 @endsection
 
 @section('content')
+<h2>Browsers</h2>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-irure dolor in reprehenderit in voluptate
-velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Welkom tot {{ $Name }}. {{ $information }} We bestaan als sinds {{ $experience }} jaar.
 </p>
+<ol>
+@foreach ($producten as $product)
+<li>{{ $product }} </li>
+
+@endforeach
+</ol>
+
+@for($i=1;$i<=10;$i++){
+  {{ $i }}<br/>
+  @endfor
+
 @endsection

@@ -8,4 +8,7 @@ Producten
 <p>
 Hier staan de verschillende producten
 </p>
+
+<img src="/img/firefox.png">
+
 @endsection
