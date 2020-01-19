@@ -7,6 +7,10 @@ h1 {
   font-size: 80px;
 }
 
+.list-companies {
+  padding: 50px;
+}
+
 .browser-add {
   padding: 100px;
   height: 60vh;
@@ -43,6 +47,14 @@ footer {
 .jumbotron {
   margin-bottom: 0px;
   background: red;
+}
+
+.main {
+  height: 800px;
+}
+
+.main h1, h2, h3, p {
+  padding: 50px;
 }
 
 .jumbotron-fluid {

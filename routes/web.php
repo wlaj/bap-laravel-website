@@ -26,7 +26,12 @@ Route::get('/gallery/{name}','HomeController@showName')->name('show-name');
 Route::get('/photo/upload', 'BrowserController@create')->name('photo.upload');
 Route::post('/photo/upload', 'BrowserController@store')->name('photo.store');
 
+// Route voor bedrijven ( later aanpassen )
 
+Route::get('/bedrijven', 'CompanyController@list');
+
+
+// Eerder gemaakte opdrachten
 
 Route::get('/blog/artikel/{id}','BlogController@showArtikel');
 

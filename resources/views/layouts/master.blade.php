@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
 <head>
-    @include('partials.header')
+    @include('partials.head')
 </head>
 <body>
 <div class="container-large">
