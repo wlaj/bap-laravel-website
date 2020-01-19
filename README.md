@@ -1,6 +1,6 @@
 # Laravel website voor BAP 
 
-__Momenteel bij opdracht P2.10A__
+__Momenteel bij opdracht P2.10C__
 
 Welkom tot de github pagina voor mijn laravel website. 
 
