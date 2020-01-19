@@ -17,11 +17,14 @@ Route::get('/', 'HomeController@showHome')->name('homepage');
 
 Route::get('/about-us', 'HomeController@showAboutUs')->name('about-us');
 
-Route::get('/browsers', 'HomeController@showBrowsers')->name('browsers');
+Route::get('/photos', 'HomeController@showPhotos')->name('photos');
 
 Route::get('/contact', 'HomeController@showContact')->name('contact');
 
-Route::get('/browsers/{name}','HomeController@showName')->name('show-name');
+Route::get('/gallery/{name}','HomeController@showName')->name('show-name');
+
+Route::get('/photo/upload', 'BrowserController@create')->name('photo.upload');
+Route::post('/photo/upload', 'BrowserController@store')->name('photo.store');
 
 
 

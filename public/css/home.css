@@ -1,3 +1,11 @@
 img {
   height: 200px;
 }
+
+.photo-upload {
+  padding-left: 5px !important;
+}
+
+.jumbotron {
+  height: 60vh !important;
+}

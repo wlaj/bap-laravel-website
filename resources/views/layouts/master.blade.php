@@ -12,12 +12,11 @@
     </header>
 
     <div id="main" class="">
-            @include('partials.jumbo')
                 @yield('content')
 
     </div>
 
-    <footer class="row">
+    <footer class="">
         @include('partials.footer')
     </footer>
 

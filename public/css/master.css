@@ -3,8 +3,36 @@ body, html {
   padding: 0;
 }
 
+h1 {
+  font-size: 80px;
+}
+
+.browser-add {
+  padding: 100px;
+  height: 60vh;
+}
+
 a.nav-link {
   font-size: 20px;
+}
+
+.call-to-action {
+  position: absolute;
+  left: 46%;
+  width:
+}
+
+.center p, h1 {
+text-align: center;
+}
+
+footer {
+  background-color: #343a40!important;
+  color: white;
+}
+
+.jumbotron {
+  margin-bottom: 0px;
 }
 
 .jumbotron-fluid {
@@ -13,7 +41,7 @@ a.nav-link {
     text-shadow: #444 0 1px 1px;
     color: #FFF;
     position: relative;
-    height: 60vh;
+    height: 40vh;
     display: flex;
     align-items: center;
 }
