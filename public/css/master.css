@@ -26,6 +26,15 @@ a.nav-link {
 text-align: center;
 }
 
+.is-invalid {
+border: 1px solid red;
+}
+
+.error-message {
+  margin: 5px 0;
+  padding: 5px;
+}
+
 footer {
   background-color: #343a40!important;
   color: white;
@@ -33,10 +42,12 @@ footer {
 
 .jumbotron {
   margin-bottom: 0px;
+  background: red;
 }
 
 .jumbotron-fluid {
-  background-image: url("/img/background.jpg");
+  background-image: url("");
+  background-color: black;
   background-size: cover;
     text-shadow: #444 0 1px 1px;
     color: #FFF;

@@ -34,7 +34,16 @@ class BrowserController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        $request->validate(
+          [
+            'name' => 'required|min:3',
+            'description' => 'required|min:10',
+            'username' => 'required|min:3'
+          ]
+
+        );
+
+        return 'VALIDATIE IS GELUKT';
     }
 
     /**
