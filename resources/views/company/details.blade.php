@@ -16,19 +16,17 @@
 
 @section('content')
 <div class="main-list">
-<h3>Alle bedrijven</h3>
+<h3>{{ $bedrijf->name }}</h3>
 </div>
 <div class="list-companies">
-  <table class="table table-condensed">
-@foreach($bedrijven as $bedrijf)
-<tr>
-  <td><a href="{{ route('company.details', ['id' => $bedrijf->id]) }}">{{ $bedrijf->name }}</a></td>
-  <td> {{ $bedrijf->address }}</td>
-  <td> {{ $bedrijf->zipcode }}</td>
-  <td> {{ $bedrijf->city }}</td>
-  <td> {{ $bedrijf->country }}</td>
-</tr>
-@endforeach
-</table>
+  {{ $bedrijf->address }}<br>
+  {{ $bedrijf->zipcode }}<br>
+  {{ $bedrijf->city }}<br>
+  {{ $bedrijf->phone }}<br>
 </div>
+<p>
+  {{ $bedrijf->description }}
+</p>
+<hr>
+<a href="{{ route('company.list') }}">Terug naar alle bedrijven</a>
 @endsection

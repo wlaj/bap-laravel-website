@@ -8,7 +8,7 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container center">
     <h1 class="display-7">Browser</h1>
-    <p class="lead display-7">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    <p class="lead display-7">The first open-source social media where you don't have to login.</p>
       <a href="{{ route('photo.upload') }}" class="btn btn-primary my-2 my-sm-0 call-to-action" type="submit">Begin met browsen</a>
   </div>
 </div>
@@ -18,9 +18,9 @@
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-body">
-                        <div class="h5">@LeeCross</div>
-                        <div class="h7 text-muted">Fullname : Miracles Lee Cross</div>
-                        <div class="h7">Developer of web applications, JavaScript, PHP, Java, Python, Ruby, Java, Node.js,
+                        <div class="h5">@WLAJ</div>
+                        <div class="h7 text-muted">Fullname : Lucas Jansen</div>
+                        <div class="h7">Developer of web applications, JavaScript, PHP, Java, Laravel, Node.js,
                             etc.
                         </div>
                     </div>
@@ -52,13 +52,37 @@
                             </li>
                         </ul>
                     </div>
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+                    <form action="{{ route('photo.store') }}" method="POST" class="browser-add">
+                        @csrf
+
                     <div class="card-body">
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
-                                <div class="form-group">
-                                    <label class="sr-only" for="message">post</label>
-                                    <textarea class="form-control" id="message" rows="3" placeholder="What are you thinking?"></textarea>
-                                </div>
+                              <div class="form-group">
+                                  <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" id="formGroupExampleInput" placeholder="Title">
+                                  @error('name')
+                          <div class="alert alert-danger">{{ $message }}</div>
+                      @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2"></label>
+                        <textarea class="form-control @error('description') is-invalid @enderror" name="description" placeholder="What are you thinking?" aria label="With textarea">{{ old('description') }}</textarea>
+                        @error('description')
+                  <div class="alert alert-danger">{{ $message }}</div>
+              @enderror
+                    </div>
+
+                  </form>
 
                             </div>
                             <div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="images-tab">
@@ -100,8 +124,8 @@
                                     <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
                                 </div>
                                 <div class="ml-2">
-                                    <div class="h5 m-0">@LeeCross</div>
-                                    <div class="h7 text-muted">Miracles Lee Cross</div>
+                                    <div class="h5 m-0">WLAJ</div>
+                                    <div class="h7 text-muted">Lucas Jansen</div>
                                 </div>
                             </div>
                             <div>
@@ -149,8 +173,8 @@
                                     <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
                                 </div>
                                 <div class="ml-2">
-                                    <div class="h5 m-0">@LeeCross</div>
-                                    <div class="h7 text-muted">Miracles Lee Cross</div>
+                                    <div class="h5 m-0">@WLAJ</div>
+                                    <div class="h7 text-muted">Lucas Jansen</div>
                                 </div>
                             </div>
                             <div>
@@ -210,8 +234,8 @@
                                     <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
                                 </div>
                                 <div class="ml-2">
-                                    <div class="h5 m-0">@LeeCross</div>
-                                    <div class="h7 text-muted">Miracles Lee Cross</div>
+                                    <div class="h5 m-0">@WLAJ</div>
+                                    <div class="h7 text-muted">Lucas Jansen</div>
                                 </div>
                             </div>
                             <div>

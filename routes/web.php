@@ -28,7 +28,8 @@ Route::post('/photo/upload', 'BrowserController@store')->name('photo.store');
 
 // Route voor bedrijven ( later aanpassen )
 
-Route::get('/bedrijven', 'CompanyController@list');
+Route::get('/companies', 'CompanyController@list')->name('company.list');
+Route::get('/companies/{id}','CompanyController@details')->name('company.details');
 
 
 // Eerder gemaakte opdrachten
