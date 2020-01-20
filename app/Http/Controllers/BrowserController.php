@@ -43,6 +43,9 @@ class BrowserController extends Controller
 
         );
 
+        // Hier de gegevens opslaan in de database via de product class / model
+        
+
         return 'VALIDATIE IS GELUKT';
     }
 

@@ -1,4 +1,12 @@
+.alert-danger {
+ color: red !important;
+ background-color: white !important;
+ border-color: white !important;
+}
 
+.alert {
+ padding: .25rem 0rem !important;
+}
 
 .photo-upload {
   padding-left: 5px !important;
