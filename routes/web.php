@@ -23,13 +23,18 @@ Route::get('/contact', 'HomeController@showContact')->name('contact');
 
 Route::get('/gallery/{name}','HomeController@showName')->name('show-name');
 
-Route::get('/photo/upload', 'BrowserController@create')->name('photo.upload');
-Route::post('/photo/upload', 'BrowserController@store')->name('photo.store');
+Route::get('/post/upload', 'PostController@create')->name('photo.upload');
+Route::post('/post/upload', 'PostController@store')->name('photo.store');
 
 // Route voor bedrijven ( later aanpassen )
 
 Route::get('/companies', 'CompanyController@list')->name('company.list');
 Route::get('/companies/{id}','CompanyController@details')->name('company.details');
+
+// Route voor posts
+
+Route::get('/post/create', 'Post@create');
+Route::get('/post/create','Post@store')->name('post.details');
 
 
 // Eerder gemaakte opdrachten

@@ -67,8 +67,8 @@
                       @enderror
                               </div>
                               <div class="form-group">
-                                  <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" id="formGroupExampleInput" placeholder="Title">
-                                  @error('name')
+                                  <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" id="formGroupExampleInput" placeholder="Title">
+                                  @error('title')
                           <div class="alert alert-danger">{{ $message }}</div>
                       @enderror
                     </div>
@@ -95,7 +95,7 @@
                         </div>
                         <div class="btn-toolbar justify-content-between">
                             <div class="btn-group">
-                                <button type="submit" class="btn btn-primary">hare</button>
+                                <button type="submit" class="btn btn-primary">Share</button>
                             </div>
                             <div class="btn-group">
                                 <button id="btnGroupDrop1" type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
@@ -123,7 +123,7 @@
                                 </div>
                                 <div class="ml-2">
                                     <div class="h5 m-0">WLAJ</div>
-                                    <div class="h7 text-muted">Lucas Jansen</div>
+                                    <div class="h7 text-muted">Anonymous</div>
                                 </div>
                             </div>
                             <div>
