@@ -5,320 +5,119 @@
 </head>
 
 @section('content')
-<div class="jumbotron jumbotron-fluid">
-  <div class="container center">
-    <h1 class="display-7">Browser</h1>
-    <p class="lead display-7">The first open-source social media where you don't have to login.</p>
-      <a href="{{ route('photo.upload') }}" class="btn btn-primary my-2 my-sm-0 call-to-action" type="submit">Begin met browsen</a>
-  </div>
-</div>
-
-<div class="container-fluid gedf-wrapper">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="h5">@WLAJ</div>
-                        <div class="h7 text-muted">Fullname : Lucas Jansen</div>
-                        <div class="h7">Developer of web applications, JavaScript, PHP, Java, Laravel, Node.js,
-                            etc.
-                        </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <div class="h6 text-muted">Followers</div>
-                            <div class="h5">5.2342</div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="h6 text-muted">Following</div>
-                            <div class="h5">6758</div>
-                        </li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6 gedf-main">
-
-                <!--- \\\\\\\Post-->
-                <div class="card gedf-card">
-                    <div class="card-header">
-                        <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">Make
-                                    a publication</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="images-tab" data-toggle="tab" role="tab" aria-controls="images" aria-selected="false" href="#images">Images</a>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <form action="{{ route('photo.store') }}" method="POST" class="">
-                        @csrf
-
-                    <div class="card-body">
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
-                              <div class="form-group">
-                                  <input type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" id="formGroupExampleInput" placeholder="Username">
-                                  @error('username')
-                          <div class="alert alert-danger">{{ $message }}</div>
-                      @enderror
-                              </div>
-                              <div class="form-group">
-                                  <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" id="formGroupExampleInput" placeholder="Title">
-                                  @error('title')
-                          <div class="alert alert-danger">{{ $message }}</div>
-                      @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="formGroupExampleInput2"></label>
-                        <textarea class="form-control @error('description') is-invalid @enderror" name="description" placeholder="What are you thinking?" aria label="With textarea">{{ old('description') }}</textarea>
-                        @error('description')
-                  <div class="alert alert-danger">{{ $message }}</div>
-              @enderror
-                    </div>
-
-                  </form>
-
-                            </div>
-                            <div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="images-tab">
-                                <div class="form-group">
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="customFile">
-                                        <label class="custom-file-label" for="customFile">Upload image</label>
-                                    </div>
-                                </div>
-                                <div class="py-4"></div>
-                            </div>
-                        </div>
-                        <div class="btn-toolbar justify-content-between">
-                            <div class="btn-group">
-                                <button type="submit" class="btn btn-primary">Share</button>
-                            </div>
-                            <div class="btn-group">
-                                <button id="btnGroupDrop1" type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    <i class="fa fa-globe"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
-                                    <a class="dropdown-item" href="#"><i class="fa fa-globe"></i> Public</a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-users"></i> Friends</a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Just me</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Post /////-->
-
-                <!--- \\\\\\\Post-->
-                <div class="card gedf-card">
-                    <div class="card-header">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="mr-2">
-                                    <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
-                                </div>
-                                <div class="ml-2">
-                                    <div class="h5 m-0">WLAJ</div>
-                                    <div class="h7 text-muted">Anonymous</div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="dropdown">
-                                    <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-ellipsis-h"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-                                        <div class="h6 dropdown-header">Configuration</div>
-                                        <a class="dropdown-item" href="#">Save</a>
-                                        <a class="dropdown-item" href="#">Hide</a>
-                                        <a class="dropdown-item" href="#">Report</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card-body">
-                        <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>10 min ago</div>
-                        <a class="card-link" href="#">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adip.</h5>
-                        </a>
-
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo recusandae nulla rem eos ipsa praesentium esse magnam nemo dolor
-                            sequi fuga quia quaerat cum, obcaecati hic, molestias minima iste voluptates.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
-                    </div>
-                </div>
-                <!-- Post /////-->
-
-
-                <!--- \\\\\\\Post-->
-                <div class="card gedf-card">
-                    <div class="card-header">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="mr-2">
-                                    <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
-                                </div>
-                                <div class="ml-2">
-                                    <div class="h5 m-0">@WLAJ</div>
-                                    <div class="h7 text-muted">Lucas Jansen</div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="dropdown">
-                                    <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-ellipsis-h"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-                                        <div class="h6 dropdown-header">Configuration</div>
-                                        <a class="dropdown-item" href="#">Save</a>
-                                        <a class="dropdown-item" href="#">Hide</a>
-                                        <a class="dropdown-item" href="#">Report</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card-body">
-                        <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i> 10 min ago</div>
-                        <a class="card-link" href="#">
-                            <h5 class="card-title"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit consectetur
-                                deserunt illo esse distinctio.</h5>
-                        </a>
-
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam omnis nihil, aliquam est, voluptates officiis iure soluta
-                            alias vel odit, placeat reiciendis ut libero! Quas aliquid natus cumque quae repellendus. Lorem
-                            ipsum dolor sit amet consectetur adipisicing elit. Ipsa, excepturi. Doloremque, reprehenderit!
-                            Quos in maiores, soluta doloremque molestiae reiciendis libero expedita assumenda fuga quae.
-                            Consectetur id molestias itaque facere? Hic!
-                        </p>
-                        <div>
-                            <span class="badge badge-primary">JavaScript</span>
-                            <span class="badge badge-primary">Android</span>
-                            <span class="badge badge-primary">PHP</span>
-                            <span class="badge badge-primary">Node.js</span>
-                            <span class="badge badge-primary">Ruby</span>
-                            <span class="badge badge-primary">Paython</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
-                    </div>
-                </div>
-                <!-- Post /////-->
-
-
-                <!--- \\\\\\\Post-->
-                <div class="card gedf-card">
-                    <div class="card-header">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="mr-2">
-                                    <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
-                                </div>
-                                <div class="ml-2">
-                                    <div class="h5 m-0">@WLAJ</div>
-                                    <div class="h7 text-muted">Lucas Jansen</div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="dropdown">
-                                    <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-ellipsis-h"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-                                        <div class="h6 dropdown-header">Configuration</div>
-                                        <a class="dropdown-item" href="#">Save</a>
-                                        <a class="dropdown-item" href="#">Hide</a>
-                                        <a class="dropdown-item" href="#">Report</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card-body">
-                        <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i> Hace 40 min</div>
-                        <a class="card-link" href="#">
-                            <h5 class="card-title">Totam non adipisci hic! Possimus ducimus amet, dolores illo ipsum quos
-                                cum.</h5>
-                        </a>
-
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt fugit reprehenderit consectetur exercitationem odio,
-                            quam nobis? Officiis, similique, harum voluptate, facilis voluptas pariatur dolorum tempora sapiente
-                            eius maxime quaerat.
-                            <a href="https://mega.nz/#!1J01nRIb!lMZ4B_DR2UWi9SRQK5TTzU1PmQpDtbZkMZjAIbv97hU" target="_blank">https://mega.nz/#!1J01nRIb!lMZ4B_DR2UWi9SRQK5TTzU1PmQpDtbZkMZjAIbv97hU</a>
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
-                    </div>
-                </div>
-                <!-- Post /////-->
-
-
-
-            </div>
-            <div class="col-md-3">
-                <div class="card gedf-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
-                <div class="card gedf-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                    </div>
-            </div>
+<header class="masthead text-white text-center" style="background-image: url('img/bg-showcase-1.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h1 class="mb-5">Build a landing page for your business or project and generate more leads!</h1>
         </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form>
+            <div class="form-row">
+              <div class="col-12 col-md-9 mb-2 mb-md-0">
+                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+              </div>
+              <div class="col-12 col-md-3">
+                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+  </header>
 
-<!--
-<div class="row">
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-screen-desktop m-auto text-primary"></i>
+            </div>
+            <h3>Fully Responsive</h3>
+            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-layers m-auto text-primary"></i>
+            </div>
+            <h3>Bootstrap 4 Ready</h3>
+            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-check m-auto text-primary"></i>
+            </div>
+            <h3>Easy to Use</h3>
+            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="col-lg-4 col-md-4 col-xs-4 thumb">
-    <a class="thumbnail" href="#">
-        <img class="img-responsive" src="{{ asset('/img/firefox.png') }}" alt="">
-    </a>
-</div>
-<div class="col-lg-4 col-md-4 col-xs-4 thumb">
-    <a class="thumbnail" href="#">
-        <img class="img-responsive" src="{{ asset('/img/firefox.png') }}" alt="">
-    </a>
-</div>
-<div class="col-lg-4 col-md-4 col-xs-4 thumb">
-    <a class="thumbnail" href="#">
-        <img class="img-responsive" src="{{ asset('/img/firefox.png') }}" alt="">
-    </a>
-</div>
- -->
+  <!-- Image Showcases -->
+  <section class="showcase">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>Fully Responsive Design</h2>
+          <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
+        <div class="col-lg-6 my-auto showcase-text">
+          <h2>Updated For Bootstrap 4</h2>
+          <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>Easy to Use &amp; Customize</h2>
+          <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials text-center bg-light">
+    <div class="container">
+      <h2 class="mb-5">What people are saying...</h2>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
+            <h5>Margaret E.</h5>
+            <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
+            <h5>Fred S.</h5>
+            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
+            <h5>Sarah W.</h5>
+            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sectio>
 @stop

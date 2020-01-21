@@ -16,7 +16,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all();
+
+        return view('post.posts', ['posts' => $posts]);
     }
 
     /**
@@ -26,7 +28,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('home');
+        return view('post.posts ');
     }
 
     /**
@@ -40,8 +42,8 @@ class PostController extends Controller
         $postData = $request->validate(
           [
             'title' => 'required|min:3',
-            'description' => 'required|min:10',
-            'username' => 'required|min:3'
+            'username' => 'required|min:3',
+            'description' => 'required|min:10'
           ]
 
         );
@@ -56,7 +58,7 @@ class PostController extends Controller
         $post->save();
 
 
-        return 'VALIDATIE IS GELUKT';
+        return 'UW GEGEVENS ZIJN OPGESLAGEN IN DE DATABASE';
     }
 
     /**
