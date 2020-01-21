@@ -18,55 +18,12 @@
 
 @section('content')
 	<!-- Hero section -->
-  <div class="jumbotron jumbotron-fluid" style="background= bgimage.jpg">
+  <div class="jumbotron jumbotron-fluid" style="background: url(https://i.imgur.com/Vf8nqA4.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
   <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
+    <h1 class="display-4" style="font-weight: 500";>Fluid jumbotron</h1>
     <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
   </div>
 </div>
-	<section class="hero-section">
-		<div class="hero-slider owl-carousel">
-			<div class="hs-item">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="hs-text">
-								<h2><span>Music</span> for everyone.</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
-								<a href="#" class="site-btn">Download Now</a>
-								<a href="#" class="site-btn sb-c2">Start free trial</a>
-							</div>
-						</div>
-						<div class="col-lg-6">
-							<div class="hr-img">
-								<img src="img/hero-bg.png" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="hs-item">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="hs-text">
-								<h2><span>Listen </span> to new music.</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
-								<a href="#" class="site-btn">Download Now</a>
-								<a href="#" class="site-btn sb-c2">Start free trial</a>
-							</div>
-						</div>
-						<div class="col-lg-6">
-							<div class="hr-img">
-								<img src="img/hero-bg.png" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Hero section end -->
 
 	<!-- Intro section -->
 	<section class="intro-section spad">
@@ -79,7 +36,6 @@
 				</div>
 				<div class="col-lg-6">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
-					<a href="#" class="site-btn">Try it now</a>
 				</div>
 			</div>
 		</div>

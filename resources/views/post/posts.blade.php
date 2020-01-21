@@ -2,13 +2,14 @@
 
 <head>
      <link rel="stylesheet" href="/css/home.css">
+     <link rel="stylesheet" href="/css/posts.css">
 </head>
 
 @section('content')
 <div class="container-fluid gedf-wrapper">
         <div class="row">
             <div class="col-md-3">
-                <div class="card">
+                <div class="card one-col-sm">
                     <div class="card-body">
                         <div class="h5">@WLAJ</div>
                         <div class="h7 text-muted">Fullname : Lucas Jansen</div>
@@ -136,7 +137,7 @@
 
                     </div>
                     <div class="card-body">
-                        <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>10 min ago</div>
+                        <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>{{ $post->created_at }}</div>
                         <a class="card-link" href="#">
                             <h5 class="card-title">{{ $post->title }}</h5>
                         </a>

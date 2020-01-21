@@ -1,0 +1,12 @@
+body, html {
+  background-color: #15202B !important;
+}
+
+.one-col-sm {
+ background-color: #192734;
+}
+
+.list-group-flush .list-group-item, .card-body, .card, .form-control{
+  background-color: #192734 !important;
+  color: white;
+}

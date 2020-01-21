@@ -58,13 +58,15 @@ footer {
 }
 
 .jumbotron-fluid {
+  font-family: Montserrat;
+  font-weight: 500 !important;
   background-image: url("");
-  background-color: black;
+  background-color: #15202B;
   background-size: cover;
     text-shadow: #444 0 1px 1px;
     color: #FFF;
     position: relative;
     height: 40vh;
     display: flex;
-    align-items: center;
+    text-align: center;
 }
