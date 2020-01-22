@@ -62,3 +62,7 @@ route::prefix('mijn-account')->group(function(){
 Route::get('/producten', 'PageController@index');
 Route::get('/dit/is/een/lange-url/zeg', 'PageController@LongUrl');
 Route::redirect('/korte-url', '/dit/is/een/lange-url/zeg');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

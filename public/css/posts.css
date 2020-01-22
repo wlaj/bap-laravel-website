@@ -7,6 +7,6 @@ body, html {
 }
 
 .list-group-flush .list-group-item, .card-body, .card, .form-control{
-  background-color: #36393F !important;
+  background-color: #2F3136 !important;
   color: white;
 }
