@@ -22,11 +22,11 @@
   <table class="table table-condensed">
 @foreach($bedrijven as $bedrijf)
 <tr>
-  <td><a href="{{ route('company.details', ['id' => $bedrijf->id]) }}">{{ $bedrijf->name }}</a></td>
-  <td> {{ $bedrijf->address }}</td>
-  <td> {{ $bedrijf->zipcode }}</td>
-  <td> {{ $bedrijf->city }}</td>
-  <td> {{ $bedrijf->country }}</td>
+  <td><a href="{{ route('photo.details', ['id' => $bedrijf->id]) }}">{{ $bedrijf->name }}</a></td>
+  <td> {{ $post->address }}</td>
+  <td> {{ $post->zipcode }}</td>
+  <td> {{ $post->city }}</td>
+  <td> {{ $post->country }}</td>
 </tr>
 @endforeach
 </table>

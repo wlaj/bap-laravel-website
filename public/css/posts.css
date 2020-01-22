@@ -1,12 +1,12 @@
 body, html {
-  background-color: #15202B !important;
+  background-color: #202225 !important;
 }
 
 .one-col-sm {
- background-color: #192734;
+ background-color: #2F3136;
 }
 
 .list-group-flush .list-group-item, .card-body, .card, .form-control{
-  background-color: #192734 !important;
+  background-color: #36393F !important;
   color: white;
 }

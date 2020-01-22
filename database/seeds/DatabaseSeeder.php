@@ -11,6 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // Hier gaan we 200 posts generen met data
+        $this->call(PostSeeder::class);
     }
 }
