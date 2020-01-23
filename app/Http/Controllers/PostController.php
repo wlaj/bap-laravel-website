@@ -16,7 +16,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::orderBy('created_at', 'desc')->get();
+
+
 
         return view('post.posts', ['posts' => $posts]);
     }
@@ -57,8 +59,6 @@ class PostController extends Controller
         $post->title = $postData['title'];
         $post->username = $postData['username'];
         $post->description = $postData['description'];
-
-        $sorted = $post->sortBy('time');
 
         $post->save();
 
