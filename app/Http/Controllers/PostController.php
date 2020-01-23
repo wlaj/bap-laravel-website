@@ -39,6 +39,9 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+
+
+
         $postData = $request->validate(
           [
             'title' => 'required|min:3',
@@ -54,6 +57,8 @@ class PostController extends Controller
         $post->title = $postData['title'];
         $post->username = $postData['username'];
         $post->description = $postData['description'];
+
+        $sorted = $post->sortBy('time');
 
         $post->save();
 

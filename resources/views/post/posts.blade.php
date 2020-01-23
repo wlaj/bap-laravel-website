@@ -108,6 +108,7 @@
 
                 <!--- \\\\\\\Post-->
               @foreach($posts as $post)
+              News::latest()->get();
                 <div class="card gedf-card">
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
