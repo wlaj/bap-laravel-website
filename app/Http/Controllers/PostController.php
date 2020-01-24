@@ -42,13 +42,17 @@ class PostController extends Controller
     public function store(Request $request)
     {
 
-
+      //  $uploadedFile = $request->file('image');
+      //  $newFilename = $uploadedFile->store('public/photos');
+      //  dd($newFilename);
 
         $postData = $request->validate(
           [
             'title' => 'required|min:3',
             'username' => 'required|min:3',
-            'description' => 'required|min:10'
+            'description' => 'required|min:10',
+            'tags' => 'min:3',
+            'image' => 'image'
           ]
 
         );
@@ -59,6 +63,7 @@ class PostController extends Controller
         $post->title = $postData['title'];
         $post->username = $postData['username'];
         $post->description = $postData['description'];
+        $post->tags = $postData['tags'];
 
         $post->save();
 

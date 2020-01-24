@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('title', 255);
             $table->string('username', 255);
             $table->text('description');
+            $table->string('tags', 255);
             // Hier kan de tijd staan in de database
             $table->timestamps();
         });

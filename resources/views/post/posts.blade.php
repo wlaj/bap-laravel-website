@@ -73,6 +73,12 @@
               @enderror
                     </div>
                     <div class="form-group">
+                        <input type="text" class="form-control @error('tags') is-invalid @enderror" name="tags" value="{{ old('tags') }}" id="formGroupExampleInput" placeholder="Tags">
+                        @error('tags')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+          </div>
+                    <div class="form-group">
                                     <div class="custom-file">
                                         <input type="file" class="custom-file-input form-control @error('image') is-invalid @enderror" id="customFile" name="image">
                                         <label class="custom-file-label" for="customFile">Upload image</label>
@@ -156,7 +162,7 @@
                             {{ $post->description }}
                         </p>
                         <div>
-                            <span class="badge badge-primary">JavaScript</span>
+                            <span class="badge badge-primary">{{ $post->tags }}</span>
                         </div>
                     </div>
                     <div class="card-footer">
