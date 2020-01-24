@@ -47,7 +47,7 @@
                     </div>
 
 
-                    <form action="{{ route('photo.store') }}" method="POST" class="">
+                    <form action="{{ route('photo.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                     <div class="card-body">
@@ -72,6 +72,15 @@
                   <div class="alert alert-danger">{{ $message }}</div>
               @enderror
                     </div>
+                    <div class="form-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input form-control @error('image') is-invalid @enderror" id="customFile" name="image">
+                                        <label class="custom-file-label" for="customFile">Upload image</label>
+                                        @error('image')
+                  <div class="alert alert-danger">{{ $message }}</div>
+              @enderror
+                                    </div>
+                                    </div>
 
                   </form>
 
@@ -146,6 +155,9 @@
                         <p class="card-text">
                             {{ $post->description }}
                         </p>
+                        <div>
+                            <span class="badge badge-primary">JavaScript</span>
+                        </div>
                     </div>
                     <div class="card-footer">
                         <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
