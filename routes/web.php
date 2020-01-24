@@ -38,6 +38,7 @@ Route::get('/companies/{id}','CompanyController@details')->name('company.details
 // Route voor posts
 
 Route::get('/posts', 'PostController@index')->name('post.posts');
+Route::get('/posts/{id}', 'PostController@show')->name('post.details');
 Route::get('/post/create', 'Post@create');
 Route::get('/post/create','Post@store')->name('post.details');
 

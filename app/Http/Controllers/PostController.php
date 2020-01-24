@@ -61,7 +61,7 @@ class PostController extends Controller
       $post->description = $postData['description'];
       $post->tags = $postData['tags'];
 
-      $newFilename = $postData['image']->store('posts', 'public');
+      $newFilename = $postData['image']->store('post', 'public');
       $postData['image'] = $newFilename;
 
       Post::create($postData);
@@ -82,7 +82,9 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::find($id);
+
+        return view('post.details', ['post' => $post]);
     }
 
     /**
