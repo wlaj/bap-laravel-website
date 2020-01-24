@@ -42,10 +42,6 @@ class PostController extends Controller
     public function store(Request $request)
     {
 
-      //  $uploadedFile = $request->file('image');
-      //  $newFilename = $uploadedFile->store('public/photos');
-      //  dd($newFilename);
-
         $postData = $request->validate(
           [
             'title' => 'required|min:3',
@@ -58,17 +54,26 @@ class PostController extends Controller
         );
 
         // Hier de gegevens opslaan in de database via de post class / model
-        $post = new Post();
+      $post = new Post();
 
-        $post->title = $postData['title'];
-        $post->username = $postData['username'];
-        $post->description = $postData['description'];
-        $post->tags = $postData['tags'];
+      $post->title = $postData['title'];
+      $post->username = $postData['username'];
+      $post->description = $postData['description'];
+      $post->tags = $postData['tags'];
 
-        $post->save();
+      $newFilename = $postData['image']->store('public/photos');
+      $postData['image'] = $newFilename;
+
+      dd($postData);
+
+      Post::create($postData);
+
+      return redirect()->route('post.posts');
+
+      $post->save();
 
 
-        return 'UW GEGEVENS ZIJN OPGESLAGEN IN DE DATABASE';
+      return 'UW GEGEVENS ZIJN OPGESLAGEN IN DE DATABASE';
     }
 
     /**
