@@ -61,10 +61,8 @@ class PostController extends Controller
       $post->description = $postData['description'];
       $post->tags = $postData['tags'];
 
-      $newFilename = $postData['image']->store('public/photos');
+      $newFilename = $postData['image']->store('posts', 'public');
       $postData['image'] = $newFilename;
-
-      dd($postData);
 
       Post::create($postData);
 
