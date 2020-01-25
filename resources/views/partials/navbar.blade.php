@@ -25,7 +25,7 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <a href="{{ route('photo.upload') }}" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Fotos uploaden</a>
+      <a href="{{ route('post.posts') }}" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Fotos uploaden</a>
     </form>
   </div>
 </nav>

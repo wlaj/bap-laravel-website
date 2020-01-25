@@ -48,7 +48,7 @@ class PostController extends Controller
             'username' => 'required|min:3',
             'description' => 'required|min:10',
             'tags' => 'min:3',
-            'image' => 'image'
+            'image' => 'required|image'
           ]
 
         );
