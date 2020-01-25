@@ -1,8 +1,12 @@
 # Laravel website voor BAP 
 
-__Momenteel bij opdracht P2.11B__
+__Website is klaar__
 
 Welkom tot de github pagina voor mijn laravel website. 
+
+## Belangrijk 
+
+User stories staan in de Github
 
 ## Opdrachten 
 
