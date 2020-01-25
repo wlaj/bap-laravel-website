@@ -37,10 +37,14 @@ Route::get('/companies/{id}','CompanyController@details')->name('company.details
 
 // Route voor posts
 
+Route::prefix('/user')->middleware('auth')->group(function () {
 Route::get('/posts', 'PostController@index')->name('post.posts');
 Route::get('/posts/{id}', 'PostController@show')->name('post.details');
+
+// Niet werkende links ( voor nu )
 Route::get('/post/create', 'Post@create');
 Route::get('/post/create','Post@store')->name('post.details');
+});
 
 
 // Eerder gemaakte opdrachten

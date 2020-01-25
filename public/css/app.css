@@ -1,5 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+body {
+  background-color: #202225 !important;
+}
+
+label {
+  color: white;
+}
+
+div {
+  color: white;
+  background-color: #202225 !important;
+}
+
+.col-md-8 {
+  background-color: #202225 !important;
+}
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -5127,7 +5143,7 @@ input[type=button].btn-block {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: white;
 }
 
 .navbar-light .navbar-brand:hover,
@@ -5136,7 +5152,7 @@ input[type=button].btn-block {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
@@ -7320,6 +7336,10 @@ a.close.disabled {
   background-color: #3490dc !important;
 }
 
+main.py-4 {
+  background: #202225 !important;
+}
+
 a.bg-primary:hover,
 a.bg-primary:focus,
 button.bg-primary:hover,
@@ -7394,7 +7414,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: #202225 !important
 }
 
 a.bg-dark:hover,
@@ -7405,7 +7425,7 @@ button.bg-dark:focus {
 }
 
 .bg-white {
-  background-color: #fff !important;
+
 }
 
 .bg-transparent {
@@ -11355,4 +11375,3 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-
